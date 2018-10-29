@@ -10,12 +10,17 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   let sumNumber = a + b 
-  let finalstatment = ' The sum of ' + a  + 'and ' + b +  ' is ' + sumNumber + '.'
-  return [sumNumber, finalstatment] 
+  let finalstatment = 'The sum of ' + a  + ' and ' + b +  ' is ' + sumNumber + '.'
+  let answer = [sumNumber, finalstatment] 
+  console.log(answer)
+  return [sumNumber, finalstatment]; 
+   
 } 
+sum(4,7);
 // Here is the test for sum(); uncomment it to run it
-alert(sum(4, 7));
-
+testSum(4,7);
+//alert(sum(4, 7));
+//console.log(sum(4, 7));
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -30,13 +35,14 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) { //eslint-disable-line
 let product= a * b
 let Finalproduct = ' The product of ' + a + 'and' + b + ' is ' + product + ' . '
-return(product, Finalproduct);
+let result2 = [product,Finalproduct]
+console.log(result2)
+return [product,Finalproduct];
 }
-multiply(3, 4)
-//console.log(multiply());
-alert(multiply(3, 4));
+multiply(3,4);
+//alert(multiply(3, 4T));
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(3,4); 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -53,11 +59,22 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+let sumNumber = a + b 
+let product = a * b
+let Finalsum = sum(sumNumber[0], c)
+let Finalproduct = multiply(product[0], c)
+let finalsum1 = 'The Sum of ' + a +' and ' + b +' and ' +  c + ' sum to ' + Finalsum[0] + '.'
+let Grandproduct2 = ' The product of ' + a + ' and ' + b + ' and ' + c + ' is ' 
++ Finalproduct[0] + '.'
+let result1 = [Finalsum[0], Finalproduct[0], finalsum1, Grandproduct2]
+console.log(result1);
+  return [Finalsum[0], Finalproduct[0], finalsum1, Grandproduct2]
 }
-
+//sumAndMultiply(a, b, c);
+//console.log(sumAndMultiply(a, b, c))
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
+//console.log(testSumAndMultiply(4, 4, 6)); 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
